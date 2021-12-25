@@ -2,8 +2,10 @@ package src
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
+	"strings"
 )
 
 //the list of characters in the json file
@@ -34,4 +36,34 @@ func GetListOfCharacters() CharacterList {
 	}
 
 	return char
+}
+
+//gets the character details in a neat format
+func CharacterDetails(char Character) string {
+	return `Your character is: **` + char.Name + `**
+ID: ` + char.Id + `
+From the ` + char.Series + ` Series
+First Smash game appearance: ` + char.First_game + `
+Aliases: ` + fmt.Sprint(strings.Join(char.Aliases, ", "))
+}
+
+//returns a pointer to a character when it finds a match
+func MatchCharacter(input string, charList CharacterList) *Character {
+	//first looks for an exact match
+	for i := 0; i < CharacterCount; i++ {
+		if charList.Character[i].Name == input {
+			char := charList.Character[i]
+			return &char
+		} else {
+			//if there is no exact match found, it looks through the aliases to find a match
+			for _, name := range charList.Character[i].Aliases {
+				if name == input {
+					char := charList.Character[i]
+					return &char
+				}
+			}
+		}
+	}
+	//if there really is no match found, returns nil
+	return nil
 }
