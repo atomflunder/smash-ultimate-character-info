@@ -57,11 +57,17 @@ func MatchCharacter(input string, charList CharacterList) *Character {
 			char := charList.Character[i]
 			return &char
 		} else {
-			//if there is no exact match found, it looks through the aliases to find a match
-			for _, name := range charList.Character[i].Aliases {
-				if name == input {
-					char := charList.Character[i]
-					return &char
+			//then it searches if the ID matches
+			if charList.Character[i].Id == input {
+				char := charList.Character[i]
+				return &char
+			} else {
+				//lastly it looks through the aliases to find a match
+				for _, name := range charList.Character[i].Aliases {
+					if name == input {
+						char := charList.Character[i]
+						return &char
+					}
 				}
 			}
 		}

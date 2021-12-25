@@ -7,8 +7,10 @@ import (
 )
 
 func MainMenu() {
-	fmt.Println("Welcome to the Smash Ultimate Character Info Tool!")
-	fmt.Println("What do you wanna do?\n1) Pick a random character\n2) Look up a character")
+	fmt.Println(`Welcome to the Smash Ultimate Character Info Tool!
+What do you wanna do?
+1) Pick a random character
+2) Look up a character`)
 
 	var ui int
 	_, err := fmt.Scan(&ui)
