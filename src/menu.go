@@ -1,11 +1,8 @@
 package src
 
 import (
-	"bufio"
 	"fmt"
 	"log"
-	"os"
-	"strings"
 )
 
 func MainMenu() {
@@ -14,26 +11,17 @@ What do you wanna do?
 1) Pick a random character
 2) Look up a character`)
 
-	var ui int
-	_, err := fmt.Scanln(&ui)
-	if err != nil {
-		log.Fatal(err)
-	}
+	ui := GetUserInput()
 
-	if ui == 1 {
+	if ui == "1" {
 		charList := GetListOfCharacters()
 		randChar := RandomCharacter(charList)
 		fmt.Println(CharacterDetails(randChar))
 
-	} else if ui == 2 {
+	} else if ui == "2" {
 		fmt.Println("Which Character do you want to look up?")
-		inpReader := bufio.NewReader(os.Stdin)
-		inp, _ := inpReader.ReadString('\n')
 
-		//since the json file is in all lowercase, we convert the input
-		inp = strings.ToLower(inp)
-		//we have to trim the whitespace from the user input, too
-		inp = strings.TrimSpace(inp)
+		inp := GetUserInput()
 
 		charList := GetListOfCharacters()
 		char := MatchCharacter(inp, charList)
