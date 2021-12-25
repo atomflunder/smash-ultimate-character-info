@@ -72,6 +72,9 @@ If you only search for one character, but use a nickname multiple characters hav
 If you search for multiple, both will be returned.
 Example: If you search for one character with "Paisy", you will get Peach. If you search for multiple with the same input you will get both Peach and Daisy.
 
+Please keep in mind that sometimes 1 playable character will be split up into multiple ones, according to the smashbros.com website.
+Example: Pokémon Trainer is split up into Squirtle, Ivysaur and Charizard.
+
 Hope this was useful!`)
 	} else {
 		fmt.Println("Please choose a valid input")
