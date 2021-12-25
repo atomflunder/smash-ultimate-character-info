@@ -1,8 +1,10 @@
 package src
 
 import (
+	"bufio"
 	"fmt"
 	"log"
+	"os"
 	"strings"
 )
 
@@ -13,7 +15,7 @@ What do you wanna do?
 2) Look up a character`)
 
 	var ui int
-	_, err := fmt.Scan(&ui)
+	_, err := fmt.Scanln(&ui)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -25,14 +27,13 @@ What do you wanna do?
 
 	} else if ui == 2 {
 		fmt.Println("Which Character do you want to look up?")
-		var inp string
-		_, err := fmt.Scan(&inp)
-		if err != nil {
-			log.Fatal(err)
-		}
+		inpReader := bufio.NewReader(os.Stdin)
+		inp, _ := inpReader.ReadString('\n')
 
 		//since the json file is in all lowercase, we convert the input
 		inp = strings.ToLower(inp)
+		//we have to trim the whitespace from the user input, too
+		inp = strings.TrimSpace(inp)
 
 		charList := GetListOfCharacters()
 		char := MatchCharacter(inp, charList)

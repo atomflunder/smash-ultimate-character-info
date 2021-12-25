@@ -53,21 +53,15 @@ Aliases: ` + fmt.Sprint(strings.Join(char.Aliases, ", "))
 func MatchCharacter(input string, charList CharacterList) *Character {
 	//first looks for an exact match
 	for i := 0; i < CharacterCount; i++ {
-		if charList.Character[i].Name == input {
+		if charList.Character[i].Name == input || charList.Character[i].Id == input {
 			char := charList.Character[i]
 			return &char
 		} else {
-			//then it searches if the ID matches
-			if charList.Character[i].Id == input {
-				char := charList.Character[i]
-				return &char
-			} else {
-				//lastly it looks through the aliases to find a match
-				for _, name := range charList.Character[i].Aliases {
-					if name == input {
-						char := charList.Character[i]
-						return &char
-					}
+			//lastly it looks through the aliases to find a match
+			for _, name := range charList.Character[i].Aliases {
+				if name == input {
+					char := charList.Character[i]
+					return &char
 				}
 			}
 		}
