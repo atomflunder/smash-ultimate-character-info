@@ -15,11 +15,12 @@ type CharacterList struct {
 
 //structure of the characters in the json file
 type Character struct {
-	Name       string   `json:"name"`
-	Id         string   `json:"id"`
-	Series     string   `json:"series"`
-	First_game string   `json:"first-game"`
-	Aliases    []string `json:"aliases"`
+	Name      string   `json:"name"`
+	Id        string   `json:"id"`
+	Series    string   `json:"series"`
+	FirstGame string   `json:"first-game"`
+	Asset     string   `json:"asset"`
+	Aliases   []string `json:"aliases"`
 }
 
 func GetListOfCharacters() CharacterList {
@@ -43,7 +44,8 @@ func CharacterDetails(char Character) string {
 	return `Your character is: **` + char.Name + `**
 ID: ` + char.Id + `
 From the ` + char.Series + ` Series
-First Smash game appearance: ` + char.First_game + `
+First Smash game appearance: ` + char.FirstGame + `
+Asset: ` + char.Asset + `
 Aliases: ` + fmt.Sprint(strings.Join(char.Aliases, ", "))
 }
 

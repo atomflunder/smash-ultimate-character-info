@@ -5,6 +5,7 @@
             "id": "1",
             "series": "super mario",
             "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mario/main.png",
             "aliases":[
                 "jump man"
             ]
@@ -14,6 +15,7 @@
             "id": "2",
             "series": "donkey kong",
             "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/donkey_kong/main.png",
             "aliases":[
                 "dk",
                 "donkey",
@@ -25,6 +27,7 @@
             "id": "3",
             "series": "the legend of zelda",
             "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/link/main.png",
             "aliases":[
 
             ]
@@ -34,6 +37,7 @@
             "id": "4",
             "series": "metroid",
             "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/samus/main.png",
             "aliases":[
 
             ]
@@ -43,6 +47,7 @@
             "id": "4e",
             "series": "metroid",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/dark_samus/main.png",
             "aliases":[
 
             ]
@@ -51,7 +56,8 @@
             "name": "yoshi",
             "id": "5",
             "series": "yoshi",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/yoshi/main.png",
             "aliases":[
 
             ]
@@ -60,7 +66,8 @@
             "name": "kirby",
             "id": "6",
             "series": "kirby",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/kirby/main.png",
             "aliases":[
                 "kirbs"
             ]
@@ -69,7 +76,8 @@
             "name": "fox",
             "id": "7",
             "series": "star fox",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/fox/main.png",
             "aliases":[
 
             ]
@@ -78,7 +86,8 @@
             "name": "pikachu",
             "id": "8",
             "series": "pokémon",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pikachu/main.png",
             "aliases":[
                 "pika"
             ]
@@ -87,7 +96,8 @@
             "name": "luigi",
             "id": "9",
             "series": "super mario",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/luigi/main.png",
             "aliases":[
                 "loogi"
             ]
@@ -96,7 +106,8 @@
             "name": "ness",
             "id": "10",
             "series": "earthbound",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ness/main.png",
             "aliases":[
 
             ]
@@ -105,7 +116,8 @@
             "name": "captain falcon",
             "id": "11",
             "series": "f-zero",
-            "first-game": "",
+            "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/captain_falcon/main.png",
             "aliases":[
                 "falcon",
                 "cpt falcon",
@@ -117,6 +129,7 @@
             "id": "12",
             "series": "pokémon",
             "first-game": "64",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/jigglypuff/main.png",
             "aliases":[
                 "jiggs",
                 "jiggly",
@@ -128,6 +141,7 @@
             "id": "13",
             "series": "super mario",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/peach/main.png",
             "aliases":[
                 "paisy"
             ]
@@ -137,6 +151,7 @@
             "id": "13e",
             "series": "super mario",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/daisy/main.png",
             "aliases":[
                 "paisy"
             ]
@@ -145,7 +160,8 @@
             "name": "bowser",
             "id": "14",
             "series": "super mario",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/bowser/main.png",
             "aliases":[
                 "king koopa"
             ]
@@ -154,7 +170,8 @@
             "name": "ice climbers",
             "id": "15",
             "series": "ice climber",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ice_climbers/main.png",
             "aliases":[
                 "icies",
                 "ice",
@@ -165,7 +182,8 @@
             "name": "sheik",
             "id": "16",
             "series": "the legend of zelda",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/sheik/main.png",
             "aliases":[
                 "shiek"
             ]
@@ -174,7 +192,8 @@
             "name": "zelda",
             "id": "17",
             "series": "the legend of zelda",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/zelda/main.png",
             "aliases":[
 
             ]
@@ -183,7 +202,8 @@
             "name": "dr. mario",
             "id": "18",
             "series": "super mario",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/dr_mario/main.png",
             "aliases":[
                 "doc",
                 "doctor mario",
@@ -195,7 +215,8 @@
             "name": "pichu",
             "id": "19",
             "series": "pokémon",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pichu/main.png",
             "aliases":[
 
             ]
@@ -204,7 +225,8 @@
             "name": "falco",
             "id": "20",
             "series": "star fox",
-            "first-game": "",
+            "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/falco/main.png",
             "aliases":[
 
             ]
@@ -214,6 +236,7 @@
             "id": "21",
             "series": "fire emblem",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/marth/main.png",
             "aliases":[
 
             ]
@@ -223,6 +246,7 @@
             "id": "21e",
             "series": "fire emblem",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/lucina/main.png",
             "aliases":[
 
             ]
@@ -232,6 +256,7 @@
             "id": "22",
             "series": "the legend of zelda",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/young_link/main.png",
             "aliases":[
                 "yl",
                 "yink",
@@ -243,6 +268,7 @@
             "id": "23",
             "series": "the legend of zelda",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ganondorf/main.png",
             "aliases":[
                 "ganon",
                 "dorf"
@@ -253,6 +279,7 @@
             "id": "24",
             "series": "pokémon",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mewtwo/main.png",
             "aliases":[
                 "mew2"
             ]
@@ -262,6 +289,7 @@
             "id": "25",
             "series": "fire emblem",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/roy/main.png",
             "aliases":[
                 "chroy"
             ]
@@ -271,6 +299,7 @@
             "id": "25e",
             "series": "fire emblem",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/chrom/main.png",
             "aliases":[
                 "chroy"
             ]
@@ -280,6 +309,7 @@
             "id": "26",
             "series": "game & watch",
             "first-game": "melee",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mr_game_and_watch/main.png",
             "aliases":[
                 "g&w",
                 "game and watch",
@@ -299,6 +329,7 @@
             "id": "27",
             "series": "kirby",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/meta_knight/main.png",
             "aliases":[
                 "mk"
             ]
@@ -308,6 +339,7 @@
             "id": "28",
             "series": "kid icarus",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pit/main.png",
             "aliases":[
 
             ]
@@ -317,6 +349,7 @@
             "id": "28e",
             "series": "kid icarus",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/dark_pit/main.png",
             "aliases":[
 
             ]
@@ -326,6 +359,7 @@
             "id": "29",
             "series": "metroid",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/zero_suit_samus/main.png",
             "aliases":[
                 "zss",
                 "zero samus"
@@ -336,6 +370,7 @@
             "id": "30",
             "series": "wario ware",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/wario/main.png",
             "aliases":[
 
             ]
@@ -345,6 +380,7 @@
             "id": "31",
             "series": "metal gear solid",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/snake/main.png",
             "aliases":[
 
             ]
@@ -354,6 +390,7 @@
             "id": "32",
             "series": "fire emblem",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ike/main.png",
             "aliases":[
 
             ]
@@ -363,6 +400,7 @@
             "id": "33",
             "series": "pokémon",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pokemon_trainer/main.png",
             "aliases":[
                 "pokémon trainer",
                 "pt"
@@ -373,6 +411,7 @@
             "id": "34",
             "series": "pokémon",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pokemon_trainer/main.png",
             "aliases":[
                 "pokémon trainer",
                 "pt",
@@ -384,6 +423,7 @@
             "id": "35",
             "series": "pokémon",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pokemon_trainer/main.png",
             "aliases":[
                 "pokémon trainer",
                 "pt",
@@ -395,6 +435,7 @@
             "id": "36",
             "series": "donkey kong",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/diddy_kong/main.png",
             "aliases":[
                 "diddy"
             ]
@@ -404,6 +445,7 @@
             "id": "37",
             "series": "earthbound",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/lucas/main.png",
             "aliases":[
 
             ]
@@ -413,6 +455,7 @@
             "id": "38",
             "series": "sonic the hedgehog",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/sonic/main.png",
             "aliases":[
                 "sanic"
             ]
@@ -422,6 +465,7 @@
             "id": "39",
             "series": "kirby",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/king_dedede/main.png",
             "aliases":[
                 "dedede",
                 "d3",
@@ -434,6 +478,7 @@
             "id": "40",
             "series": "pikmin",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/olimar/main.png",
             "aliases":[
 
             ]
@@ -443,6 +488,7 @@
             "id": "41",
             "series": "pokémon",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/lucario/main.png",
             "aliases":[
 
             ]
@@ -452,6 +498,7 @@
             "id": "42",
             "series": "r.o.b.",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/rob/main.png",
             "aliases":[
                 "rob"
             ]
@@ -461,6 +508,7 @@
             "id": "43",
             "series": "the legend of zelda",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/toon_link/main.png",
             "aliases":[
                 "tink",
                 "tl"
@@ -471,6 +519,7 @@
             "id": "44",
             "series": "star fox",
             "first-game": "brawl",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/wolf/main.png",
             "aliases":[
 
             ]
@@ -480,6 +529,7 @@
             "id": "45",
             "series": "animal crossing",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/villager/main.png",
             "aliases":[
                 "villy"
             ]
@@ -489,6 +539,7 @@
             "id": "46",
             "series": "mega man",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mega_man/main.png",
             "aliases":[
 
             ]
@@ -498,6 +549,7 @@
             "id": "47",
             "series": "wii fit",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/wii_fit_trainer/main.png",
             "aliases":[
                 "wft",
                 "wii fit",
@@ -509,6 +561,7 @@
             "id": "48",
             "series": "super mario",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/rosalina_and_luma/main.png",
             "aliases":[
                 "rosa",
                 "rosalina",
@@ -522,6 +575,7 @@
             "id": "49",
             "series": "punch-out!!",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/little_mac/main.png",
             "aliases":[
                 "mac",
                 "lil mac"
@@ -532,6 +586,7 @@
             "id": "50",
             "series": "pokémon",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/greninja/main.png",
             "aliases":[
                 "gren",
                 "ninja"
@@ -542,6 +597,7 @@
             "id": "51",
             "series": "mii",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mii_fighter/main.png",
             "aliases":[
                 "brawler"
             ]
@@ -551,6 +607,7 @@
             "id": "52",
             "series": "mii",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mii_fighter/main.png",
             "aliases":[
                 "swordfighter",
                 "swordie",
@@ -564,6 +621,7 @@
             "id": "53",
             "series": "mii",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/mii_fighter/main.png",
             "aliases":[
                 "gunner",
                 "mii gun",
@@ -575,6 +633,7 @@
             "id": "54",
             "series": "kid icarus",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/palutena/main.png",
             "aliases":[
                 "palu"
             ]
@@ -584,6 +643,7 @@
             "id": "55",
             "series": "pac man",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pac_man/main.png",
             "aliases":[
                 "pac"
             ]
@@ -593,6 +653,7 @@
             "id": "56",
             "series": "fire emblem",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/robin/main.png",
             "aliases":[
 
             ]
@@ -602,6 +663,7 @@
             "id": "57",
             "series": "xenoblade chronicles",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/shulk/main.png",
             "aliases":[
 
             ]
@@ -611,6 +673,7 @@
             "id": "58",
             "series": "super mario",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/bowser_jr/main.png",
             "aliases":[
                 "bj",
                 "bowser junior",
@@ -622,6 +685,7 @@
             "id": "59",
             "series": "duck hunt",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/duck_hunt/main.png",
             "aliases":[
                 "dh"
             ]
@@ -631,6 +695,7 @@
             "id": "60",
             "series": "street fighter",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ryu/main.png",
             "aliases":[
 
             ]
@@ -640,6 +705,7 @@
             "id": "60e",
             "series": "street fighter",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ken/main.png",
             "aliases":[
 
             ]
@@ -649,6 +715,7 @@
             "id": "61",
             "series": "final fantasy",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/cloud/main.png",
             "aliases":[
 
             ]
@@ -658,6 +725,7 @@
             "id": "62",
             "series": "fire emblem",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/corrin/main.png",
             "aliases":[
 
             ]
@@ -667,6 +735,7 @@
             "id": "63",
             "series": "bayonetta",
             "first-game": "wii u",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/bayonetta/main.png",
             "aliases":[
                 "bayo"
             ]
@@ -676,6 +745,7 @@
             "id": "64",
             "series": "splatoon",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/inkling/main.png",
             "aliases":[
                 "ink",
                 "squid"
@@ -686,6 +756,7 @@
             "id": "65",
             "series": "metroid",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/ridley/main.png",
             "aliases":[
 
             ]
@@ -695,6 +766,7 @@
             "id": "66",
             "series": "castlevania",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/simon/main.png",
             "aliases":[
                 "belmonts",
                 "belmont"
@@ -705,6 +777,7 @@
             "id": "66e",
             "series": "castlevania",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/richter/main.png",
             "aliases":[
                 "belmonts",
                 "belmont"
@@ -715,6 +788,7 @@
             "id": "67",
             "series": "donkey kong",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/king_k_rool/main.png",
             "aliases":[
                 "kkr",
                 "king k rool",
@@ -728,6 +802,7 @@
             "id": "68",
             "series": "animal crossing",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/isabelle/main.png",
             "aliases":[
                 "isa",
                 "belle"
@@ -738,6 +813,7 @@
             "id": "69",
             "series": "pokémon",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/incineroar/main.png",
             "aliases":[
                 "incin"
             ]
@@ -747,6 +823,7 @@
             "id": "70",
             "series": "super mario",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/piranha_plant/main.png",
             "aliases":[
                 "plant",
                 "piranha"
@@ -757,6 +834,7 @@
             "id": "71",
             "series": "persona",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/joker/main.png",
             "aliases":[
 
             ]
@@ -766,6 +844,7 @@
             "id": "72",
             "series": "dragon quest",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/dq_hero/main.png",
             "aliases":[
 
             ]
@@ -775,6 +854,7 @@
             "id": "73",
             "series": "banjo-kazooie",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/banjo_and_kazooie/main.png",
             "aliases":[
                 "banjo",
                 "kazooie",
@@ -788,6 +868,7 @@
             "id": "74",
             "series": "fatal fury",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/terry/main.png",
             "aliases":[
 
             ]
@@ -797,6 +878,7 @@
             "id": "75",
             "series": "fire emblem",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/byleth/main.png",
             "aliases":[
 
             ]
@@ -806,6 +888,7 @@
             "id": "76",
             "series": "arms",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/minmin/main.png",
             "aliases":[
                 "min"
             ]
@@ -815,6 +898,7 @@
             "id": "77",
             "series": "minecraft",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/steve/main.png",
             "aliases":[
                 "steve",
                 "alex",
@@ -827,6 +911,7 @@
             "id": "78",
             "series": "final fantasy",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/sephiroth/main.png",
             "aliases":[
                 "seph"
             ]
@@ -836,6 +921,7 @@
             "id": "79",
             "series": "xenoblade chronicles",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pyra/main.png",
             "aliases":[
                 "pythra",
                 "aegis"
@@ -846,6 +932,7 @@
             "id": "80",
             "series": "xenoblade chronicles",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/pyra/main.png",
             "aliases":[
                 "pythra",
                 "aegis"
@@ -856,6 +943,7 @@
             "id": "81",
             "series": "tekken",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/kazuya/main.png",
             "aliases":[
                 "kazooya"
             ]
@@ -865,6 +953,7 @@
             "id": "82",
             "series": "kingdom hearts",
             "first-game": "ultimate",
+            "asset": "https://www.smashbros.com/assets_v2/img/fighter/sora/main.png",
             "aliases":[
                 
             ]
