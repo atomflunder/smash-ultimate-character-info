@@ -69,3 +69,25 @@ func MatchCharacter(input string, charList CharacterList) *Character {
 	//if there really is no match found, returns nil
 	return nil
 }
+
+//same as above, but searches for multiple characters, maybe a lookup per series or game, or just in case of echoes (paisy)
+func MatchMultipleCharacters(input string, charList CharacterList) []*Character {
+	var matches []*Character
+
+	for i := 0; i < CharacterCount; i++ {
+		if charList.Character[i].Name == input || charList.Character[i].Id == input || charList.Character[i].FirstGame == input || charList.Character[i].Series == input {
+			matches = append(matches, &charList.Character[i])
+
+		} else {
+			for _, name := range charList.Character[i].Aliases {
+				if name == input {
+					matches = append(matches, &charList.Character[i])
+
+				}
+			}
+		}
+	}
+	//returns the list of matches, may be empty
+	return matches
+
+}
