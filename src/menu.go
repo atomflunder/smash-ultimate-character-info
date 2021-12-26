@@ -6,7 +6,49 @@ import (
 )
 
 func MainMenu() {
-	fmt.Println(`Welcome to the Smash Ultimate Character Info Tool!
+	fmt.Println(`Welcome to the Smash Ultimate Character Info Menu!
+What do you wanna do?
+1) Create, view or delete profiles
+2) Search for characters`)
+
+	ui := GetUserInput()
+
+	if ui == "1" {
+		ProfileMenu()
+	} else if ui == "2" {
+		SearchMenu()
+	} else {
+		fmt.Println("Please choose a valid input.")
+		return
+	}
+}
+
+func ProfileMenu() {
+	fmt.Println(`Welcome to the Profile Menu!
+What do you wanna do?
+1) Create a new profile
+2) View a profile
+3) Delete a profile`)
+	ui := GetUserInput()
+
+	if ui == "1" {
+		SaveProfile(GetNewProfileInfo())
+	} else if ui == "2" {
+		fmt.Println("Which profile are you looking for?")
+		input := GetUserInput()
+		prof := SearchProfile(input)
+		fmt.Println(ProfilePrettyPrint(prof))
+	} else if ui == "3" {
+		fmt.Println("Which profile do you want to delete?")
+		input := GetUserInput()
+		DeleteProfile(input)
+	} else {
+		fmt.Println("Please choose a valid input.")
+	}
+}
+
+func SearchMenu() {
+	fmt.Println(`Welcome to the Search Menu!
 What do you wanna do?
 1) Pick a random character
 2) Look up a character
@@ -77,7 +119,7 @@ Example: Pokémon Trainer is split up into Squirtle, Ivysaur and Charizard.
 
 Hope this was useful!`)
 	} else {
-		fmt.Println("Please choose a valid input")
+		fmt.Println("Please choose a valid input.")
 		return
 	}
 }

@@ -49,6 +49,17 @@ Asset: ` + char.Asset + `
 Aliases: ` + fmt.Sprint(strings.Join(char.Aliases, ", "))
 }
 
+//returns a readable string from a list of characters
+func CharactersToString(chars []Character) string {
+	var cList []string
+
+	for _, c := range chars {
+		cList = append(cList, c.Name)
+	}
+
+	return strings.Join(cList, ", ")
+}
+
 //returns a pointer to a character when it finds a match
 func MatchCharacter(input string, charList CharacterList) *Character {
 	//first looks for an exact match
