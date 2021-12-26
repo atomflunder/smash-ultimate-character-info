@@ -11,13 +11,13 @@ import (
 
 //the structure of a profile
 type Profile struct {
-	Name        string
-	Mains       []Character
-	Secondaries []Character
-	Pockets     []Character
-	SwitchFC    string
-	Region      string
-	Notes       string
+	Name        string      `json:"Name"`
+	Mains       []Character `json:"Mains"`
+	Secondaries []Character `json:"Secondaries"`
+	Pockets     []Character `json:"Pockets"`
+	SwitchFC    string      `json:"SwitchFC"`
+	Region      string      `json:"Region"`
+	Notes       string      `json:"Notes"`
 }
 
 //gets as many characters as the user wishes, until they write done
@@ -31,7 +31,13 @@ func GetProfileCharacters(cType string) []Character {
 		if strings.ToLower(input) == "done" {
 			c += 1
 		} else {
-			cList = append(cList, *MatchCharacter(input, GetListOfCharacters()))
+			char := MatchCharacter(input, GetListOfCharacters())
+			if char == nil {
+				fmt.Println("Could not find this character, please try again.")
+			} else {
+				cList = append(cList, *char)
+			}
+
 		}
 
 	}
@@ -99,8 +105,39 @@ func SaveProfile(p Profile) {
 	}
 }
 
-//searches a profile in the according folder
-func SearchProfile(inp string) Profile {
+//opens all profiles
+func OpenAllProfiles() []Profile {
+	var profList []Profile
+
+	files, err := ioutil.ReadDir("./profiles/")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, f := range files {
+		if f.Name() == ".gitignore" {
+			//we wanna skip the .gitignore file that is also present in this directory
+		} else {
+			file, err := ioutil.ReadFile("./profiles/" + f.Name())
+			if err != nil {
+				log.Fatal(err)
+			}
+			var prof Profile
+
+			err = json.Unmarshal(file, &prof)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			profList = append(profList, prof)
+		}
+	}
+
+	return profList
+}
+
+//searches a profile in the according folder, just get them by filename. can only return one profile
+func SearchProfileByName(inp string) Profile {
 	file, err := ioutil.ReadFile("./profiles/" + inp + ".json")
 	if err != nil {
 		log.Fatal(err)
@@ -114,6 +151,60 @@ func SearchProfile(inp string) Profile {
 	}
 
 	return prof
+}
+
+//searching through all profiles by their main(s), returns multiple profiles
+func SearchProfileByMain(inp string, pl []Profile) []Profile {
+	var profList []Profile
+
+	for _, p := range pl {
+		for _, m := range p.Mains {
+			if m.Name == strings.ToLower(inp) {
+				profList = append(profList, p)
+			}
+
+		}
+	}
+
+	return profList
+}
+
+//searches all profiles by any character listed, returns multiple profiles
+func SearchProfileByAnyCharacter(inp string, pl []Profile) []Profile {
+	var profList []Profile
+
+	for _, p := range pl {
+		for _, m := range p.Mains {
+			if m.Name == strings.ToLower(inp) {
+				profList = append(profList, p)
+			}
+		}
+		for _, s := range p.Secondaries {
+			if s.Name == strings.ToLower(inp) {
+				profList = append(profList, p)
+			}
+		}
+		for _, po := range p.Pockets {
+			if po.Name == strings.ToLower(inp) {
+				profList = append(profList, p)
+			}
+		}
+	}
+
+	return profList
+}
+
+//searches all profiles by region, returns multiple profiles
+func SearchProfileByRegion(inp string, pl []Profile) []Profile {
+	var profList []Profile
+
+	for _, p := range pl {
+		if p.Region == strings.ToLower(inp) {
+			profList = append(profList, p)
+		}
+	}
+
+	return profList
 }
 
 //deletes a profile file

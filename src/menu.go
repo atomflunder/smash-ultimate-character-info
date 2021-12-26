@@ -27,23 +27,78 @@ func ProfileMenu() {
 	fmt.Println(`Welcome to the Profile Menu!
 What do you wanna do?
 1) Create a new profile
-2) View a profile
+2) Search for profiles
 3) Delete a profile`)
 	ui := GetUserInput()
 
 	if ui == "1" {
 		SaveProfile(GetNewProfileInfo())
 	} else if ui == "2" {
-		fmt.Println("Which profile are you looking for?")
-		input := GetUserInput()
-		prof := SearchProfile(input)
-		fmt.Println(ProfilePrettyPrint(prof))
+		ProfileSearchMenu()
 	} else if ui == "3" {
 		fmt.Println("Which profile do you want to delete?")
 		input := GetUserInput()
 		DeleteProfile(input)
 	} else {
 		fmt.Println("Please choose a valid input.")
+		return
+	}
+}
+
+func ProfileSearchMenu() {
+	fmt.Println(`How do you want to search for profiles?
+1) By Name
+2) By Mains
+3) By Any Character listed
+4) By Region`)
+	ui := GetUserInput()
+
+	if ui == "1" {
+		fmt.Println("Please enter the name you are looking for.")
+
+		input := GetUserInput()
+		prof := SearchProfileByName(input)
+		fmt.Println(ProfilePrettyPrint(prof))
+	} else if ui == "2" {
+		fmt.Println("Please enter which main you are looking for.")
+
+		//we wanna also include the aliases in the search so, we match the input to a full name first
+		input := MatchCharacter(GetUserInput(), GetListOfCharacters()).Name
+		allProfs := OpenAllProfiles()
+		profList := SearchProfileByMain(input, allProfs)
+
+		fmt.Println("Here are all profiles I have found with " + input + " as their main.")
+		for _, p := range profList {
+			fmt.Println(ProfilePrettyPrint(p) + "\n")
+		}
+
+	} else if ui == "3" {
+		fmt.Println("Please enter which character you are looking for.")
+
+		input := MatchCharacter(GetUserInput(), GetListOfCharacters()).Name
+		allProfs := OpenAllProfiles()
+		profList := SearchProfileByAnyCharacter(input, allProfs)
+
+		fmt.Println("Here are all profiles I have found with " + input + " listed as a character.")
+		for _, p := range profList {
+			fmt.Println(ProfilePrettyPrint(p) + "\n")
+		}
+
+	} else if ui == "4" {
+		fmt.Println("Please enter the region you are looking for.")
+
+		input := GetUserInput()
+		allProfs := OpenAllProfiles()
+		profList := SearchProfileByRegion(input, allProfs)
+
+		fmt.Println("Here are all profiles in the " + input + " region.")
+		for _, p := range profList {
+			fmt.Println(ProfilePrettyPrint(p) + "\n")
+		}
+
+	} else {
+		fmt.Println("Please choose a valid input.")
+		return
 	}
 }
 
