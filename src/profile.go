@@ -20,6 +20,37 @@ type Profile struct {
 	Notes       string      `json:"Notes"`
 }
 
+//asks the user for profile information to store
+func GetNewProfileInfo() Profile {
+	profile := Profile{}
+
+	fmt.Println("What is the name of the profile?")
+	profile.Name = GetUserInput()
+
+	mList := GetProfileCharacters("mains")
+	profile.Mains = mList
+
+	sList := GetProfileCharacters("secondaries")
+	profile.Secondaries = sList
+
+	pList := GetProfileCharacters("pockets")
+	profile.Pockets = pList
+
+	fmt.Println("What is your Switch Friend Code?")
+	profile.SwitchFC = GetUserInput()
+
+	fmt.Println("What is your Region?")
+	profile.Region = GetUserInput()
+
+	fmt.Println("Any special notes?")
+	profile.Notes = GetUserInput()
+
+	fmt.Println("Profile saved! \n" + ProfilePrettyPrint(profile))
+
+	return profile
+
+}
+
 //gets as many characters as the user wishes, until they write done
 func GetProfileCharacters(cType string) []Character {
 	c := 0
@@ -59,81 +90,6 @@ Region: ` + p.Region + `
 Notes: ` + p.Notes
 
 	return ppp
-}
-
-//asks the user for profile information to store
-func GetNewProfileInfo() Profile {
-	profile := Profile{}
-
-	fmt.Println("What is the name of the profile?")
-	profile.Name = GetUserInput()
-
-	mList := GetProfileCharacters("mains")
-	profile.Mains = mList
-
-	sList := GetProfileCharacters("secondaries")
-	profile.Secondaries = sList
-
-	pList := GetProfileCharacters("pockets")
-	profile.Pockets = pList
-
-	fmt.Println("What is your Switch Friend Code?")
-	profile.SwitchFC = GetUserInput()
-
-	fmt.Println("What is your Region?")
-	profile.Region = GetUserInput()
-
-	fmt.Println("Any special notes?")
-	profile.Notes = GetUserInput()
-
-	fmt.Println("Profile saved! \n" + ProfilePrettyPrint(profile))
-
-	return profile
-
-}
-
-//saves a profile in the according file. one in each file.
-func SaveProfile(p Profile) {
-	file, err := json.MarshalIndent(p, "", "	")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	err = ioutil.WriteFile("./profiles/"+p.Name+".json", file, 0644)
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-
-//opens all profiles
-func OpenAllProfiles() []Profile {
-	var profList []Profile
-
-	files, err := ioutil.ReadDir("./profiles/")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, f := range files {
-		if f.Name() == ".gitignore" {
-			//we wanna skip the .gitignore file that is also present in this directory
-		} else {
-			file, err := ioutil.ReadFile("./profiles/" + f.Name())
-			if err != nil {
-				log.Fatal(err)
-			}
-			var prof Profile
-
-			err = json.Unmarshal(file, &prof)
-			if err != nil {
-				log.Fatal(err)
-			}
-
-			profList = append(profList, prof)
-		}
-	}
-
-	return profList
 }
 
 //searches a profile in the according folder, just get them by filename. can only return one profile
@@ -205,6 +161,49 @@ func SearchProfileByRegion(inp string, pl []Profile) []Profile {
 	}
 
 	return profList
+}
+
+//opens all profiles
+func OpenAllProfiles() []Profile {
+	var profList []Profile
+
+	files, err := ioutil.ReadDir("./profiles/")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, f := range files {
+		//we wanna skip the .gitignore and other files that may also be present in this directory
+		if strings.HasSuffix(f.Name(), ".json") {
+			file, err := ioutil.ReadFile("./profiles/" + f.Name())
+			if err != nil {
+				log.Fatal(err)
+			}
+			var prof Profile
+
+			err = json.Unmarshal(file, &prof)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			profList = append(profList, prof)
+		}
+	}
+
+	return profList
+}
+
+//saves a profile in the according file. one in each file.
+func SaveProfile(p Profile) {
+	file, err := json.MarshalIndent(p, "", "	")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = ioutil.WriteFile("./profiles/"+p.Name+".json", file, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 //deletes a profile file

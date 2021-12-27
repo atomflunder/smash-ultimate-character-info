@@ -51,7 +51,8 @@ func ProfileSearchMenu() {
 2) By Mains
 3) By Any Character listed
 4) By Region
-5) Get a random profile`)
+5) Get a random profile
+6) View all saved profiles`)
 	ui := GetUserInput()
 
 	if ui == "1" {
@@ -99,6 +100,11 @@ func ProfileSearchMenu() {
 
 	} else if ui == "5" {
 		fmt.Println(ProfilePrettyPrint(RandomProfile(OpenAllProfiles())))
+	} else if ui == "6" {
+		profList := OpenAllProfiles()
+		for _, p := range profList {
+			fmt.Println(ProfilePrettyPrint(p) + "\n")
+		}
 	} else {
 		fmt.Println("Please choose a valid input.")
 		return
