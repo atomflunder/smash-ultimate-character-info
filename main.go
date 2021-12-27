@@ -5,5 +5,8 @@ import (
 )
 
 func main() {
-	src.MainMenu()
+	for {
+		src.MainMenu()
+	}
+
 }

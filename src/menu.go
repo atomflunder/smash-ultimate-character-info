@@ -3,13 +3,16 @@ package src
 import (
 	"fmt"
 	"log"
+	"os"
 )
 
 func MainMenu() {
-	fmt.Println(`Welcome to the Smash Ultimate Character Info Menu!
+	fmt.Println(`Welcome to the Smash Ultimate Character Info Main Menu!
 What do you wanna do?
 1) Create, view or delete profiles
-2) Search for characters`)
+2) Search for characters
+...
+9) Exit Program`)
 
 	ui := GetUserInput()
 
@@ -17,6 +20,8 @@ What do you wanna do?
 		ProfileMenu()
 	} else if ui == "2" {
 		SearchMenu()
+	} else if ui == "9" {
+		ExitProgram()
 	} else {
 		fmt.Println("Please choose a valid input.")
 		return
@@ -28,7 +33,9 @@ func ProfileMenu() {
 What do you wanna do?
 1) Create a new profile
 2) Search for profiles
-3) Delete a profile`)
+3) Delete a profile
+...
+9) Exit Program`)
 	ui := GetUserInput()
 
 	if ui == "1" {
@@ -39,6 +46,8 @@ What do you wanna do?
 		fmt.Println("Which profile do you want to delete?")
 		input := GetUserInput()
 		DeleteProfile(input)
+	} else if ui == "9" {
+		ExitProgram()
 	} else {
 		fmt.Println("Please choose a valid input.")
 		return
@@ -52,7 +61,9 @@ func ProfileSearchMenu() {
 3) By Any Character listed
 4) By Region
 5) Get a random profile
-6) View all saved profiles`)
+6) View all saved profiles
+...
+9) Exit Program`)
 	ui := GetUserInput()
 
 	if ui == "1" {
@@ -105,6 +116,8 @@ func ProfileSearchMenu() {
 		for _, p := range profList {
 			fmt.Println(ProfilePrettyPrint(p) + "\n")
 		}
+	} else if ui == "9" {
+		ExitProgram()
 	} else {
 		fmt.Println("Please choose a valid input.")
 		return
@@ -118,7 +131,8 @@ What do you wanna do?
 2) Look up a character
 3) Search for multiple characters at once
 ...
-9) Help for searching`)
+8) Help for searching
+9) Exit Program`)
 
 	ui := GetUserInput()
 
@@ -155,7 +169,7 @@ What do you wanna do?
 			}
 		}
 
-	} else if ui == "9" {
+	} else if ui == "8" {
 		fmt.Println(`
 Welcome to the help menu. If you cannot find a character, here is what you need to know:
 
@@ -182,8 +196,15 @@ Please keep in mind that sometimes 1 playable character will be split up into mu
 Example: Pokémon Trainer is split up into Squirtle, Ivysaur and Charizard.
 
 Hope this was useful!`)
+	} else if ui == "9" {
+		ExitProgram()
 	} else {
 		fmt.Println("Please choose a valid input.")
 		return
 	}
+}
+
+func ExitProgram() {
+	fmt.Println("Thank you for using this tool. See you soon.")
+	os.Exit(0)
 }
